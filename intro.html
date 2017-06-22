@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="ui-mobile" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!--<link rel="canonical" href="index.html" />-->
+<link rel="icon" href="image/logo.png" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).on('click', '.ui-page', function(event){   
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slideup"}, true, true);
+        }
+		
+		else
+		{
+			window.location.href = "index_m.html";
+		}
+        event.handled = true;
+    }
+    return false;         
+});
+
+</script>
+
+<title>Taekwondo society Johor Branch</title>
+<style type="text/css">
+img {
+	max-width: 100%;
+	padding-bottom: 3px;
+}
+</style>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+
+<div data-role="page" style="background-color:#ccccff;">
+<!--
+	<div data-role="header">
+		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" data-icon="arrow-l">back</a>
+		<h2>Event</h2>
+	</div>
+-->
+	<div data-role="main" class="ui-content">
+		<br /><img src="image/logo.png" height="auto" width="auto" />
+		<h2 style="color: #800000; font-family: 'Comic Sans MS'; text-align: center">Taekwondo Society <br />Johor branch</h2>
+		<p style="text-align: center"><br />more &#187;</p>
+	</div>
+<!--
+  	<div data-role="footer" onclick="parent.location='#header'">
+  		<h2>&#60;&#60; back</h2>
+  	</div>
+-->
+</div>
+
+<div data-role="page" style="background-color:#ffffb3;">
+	<div data-role="main" class="ui-content">
+		<br /><img src="image/mainDesc.jpg" height="auto" width="auto" />
+		<h2 style="color: #800000; font-family: 'Comic Sans MS'; text-align: center">Rebuild Body<br /> and <br />Protect Yourself</h2>
+		<p style="text-align: center"><br />more &#187;</p>
+	</div>
+</div>
+
+<div data-role="page">
+	<div data-role="main" class="ui-content">
+		<br /><img src="image/mainDesc2.gif" height="auto" width="auto" />
+		<p><h2 style="color: #800000; font-family: 'Comic Sans MS'; text-align: center">&#52264;&#47159; - stand up</h2></p>
+		<p><h2 style="color: #800000; font-family: 'Comic Sans MS'; text-align: center">&#44221;&#47168; - bow</h2></p>
+		<p><h2 style="color: #800000; font-family: 'Comic Sans MS'; text-align: center">&#51456;&#48708; - ready</h2></p>
+		<p><h2 style="color: #800000; font-family: 'Comic Sans MS'; text-align: center">&#49884;&#51089; - start!!</h2></p>
+		<p style="text-align: center" onclick="window.location.href='index_m.html'"><br />Let's start &#187;</p>
+	</div>
+</div>
+
+
+
+</body>
+</html>

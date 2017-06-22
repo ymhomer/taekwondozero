@@ -1,0 +1,73 @@
+TKD webpage log file
+
+TKD webpage build 0.1 beta
+--------------------------
+Monday, February 17, 2016
+
+
+- Design webpage's layout for mobile devices
+- Basic function on webpages
+--------------------------
+
+resourse file : 
+
+folder :
+- image
+
+file :
+- index.html
+- index_m.html (deleted)
+- jquery.mobile-1.4.5.min.css (moved to css folder)
+- jquery.mobile-1.4.5.min.js (moved to js folder)
+- jquery-1.12.1.min.js (moved to js folder)
+
+====================================================
+
+TKD webpage build 0.2 beta
+--------------------------
+Thursday, March 03, 2016
+
+
+- Rebuile the layout for better surfing experience
+- Add the swap function (for change page)
+- More function on webpage
+--------------------------
+
+resourse file : 
+
+folder :
+- image
+- css
+- js
+
+file :
+- index.html
+- index_m.html (renemed to index_m_old.html)
+
+====================================================
+
+TKD webpage build 1.0 beta
+--------------------------
+Tuesday, March 22, 2016
+
+
+- Rebuile the layout for better surfing experience
+- Improve the swap function
+- More function on webpage
+- Make the webpage more stable on mobile device
+- Auto change the page view for desktop devices and mobile devices
+- Add intro.html for testting purpose
+--------------------------
+
+resourse file : 
+
+folder :
+- image
+- css
+- js
+
+file :
+- intro.html
+- index.html
+- index_m.html
+- index_m_old.html

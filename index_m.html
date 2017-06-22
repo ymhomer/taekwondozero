@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="ui-mobile" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!--<link rel="canonical" href="index.html" />-->
+<link rel="icon" href="image/logo.png" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="index_m.html">
+<link rel="canonical" href="index.html">
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).on('swipeleft', '.ui-page', function(event){    
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {    
+        var nextpage = $.mobile.activePage.next('[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
+        }
+        event.handled = true;
+    }
+    return false;         
+});
+
+$(document).on('swiperight', '.ui-page', function(event){     
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {      
+        //var prevpage = $(this).prev('[data-role="page"]');
+        //if (prevpage.length > 0) {
+            $.mobile.changePage('#header', {transition: "slide", reverse: true}, true, true);
+        //}
+        event.handled = true;
+    }
+    return false;            
+});
+</script>
+
+<title>Taekwondo society Johor Branch</title>
+<style type="text/css">
+img {
+	max-width: 100%;
+	padding-bottom: 3px;
+}
+</style>
+</head>
+
+<body>
+<!--header + overview -->
+<div data-role="page" id="header">
+	<div data-role="header">
+		<img src="image/logo.png" height="153" width="180" />
+		<h2 style="color: #800000; font-family: 'Comic Sans MS'">Taekwondo Society <br />Johor branch</h2>
+		<a href="#more" data-href="more" class="ui-btn-right ui-icon-grid ui-btn-icon-left" data-transition="pop">More</a>
+	</div>
+	
+	<div data-role="header" data-id="header">
+        <h1>Overview</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+		<img src="image/overview.gif" />
+		<p><strong>&copy; Copyright 2016 tackwondo-johor.tk</strong></p>
+		<br />
+	</div>
+	
+	<div data-role="footer" style="position:fixed;bottom: 0px;width:100%;">
+  		<div data-role="navbar">
+	        <ul>                     
+				<li><a href="#event" data-href="event" data-transition="slide"><img src="image\event.png" /><br />Event</a></li>            
+				<li><a href="#contr" data-href="contr" data-transition="slide"><img src="image\contr.png" /><br />Contract</a></li>
+				<li><a href="#about" data-href="about" data-transition="slide"><img src="image\about.png" /><br />About</a></li>
+	        </ul>
+    	</div>
+  	</div>
+</div>
+
+<!--event-->
+<div data-role="page" id="event">
+	<div data-role="header">
+		<a href="#header" data-transition="slide" data-direction="reverse" data-icon="arrow-l">back</a>
+		<h2>Event</h2>
+	</div>
+	<div data-role="main" class="ui-content">
+	<form class="ui-filterable">
+    	<input id="eventFilter" data-type="search" placeholder="Search Event" />
+    </form>
+		<ol data-role="listview" data-filter="true" data-input="#eventFilter">
+  			<li><a href="#e_Bang">Bukit Siput Performance</a></li>
+  			<li><a href="#e_Tarcian">Tarcian Come On!</a></li>
+		</ol>
+	</div>
+  	<div data-role="footer" style="position:fixed;bottom: 0px;width:100%;">
+  		<div data-role="navbar">
+	        <ul>                     
+				<li><a href="#event" data-href="event" class="ui-btn-active ui-state-persist" data-transition="slide"><img src="image\event.png" /><br />Event</a></li>            
+				<li><a href="#contr" data-href="contr" data-transition="slide"><img src="image\contr.png" /><br />Contract</a></li>
+				<li><a href="#about" data-href="about" data-transition="slide"><img src="image\about.png" /><br />About</a></li>
+	        </ul>
+    	</div>
+  	</div>
+</div>
+
+<!--contract-->
+<div data-role="page" id="contr">
+	<div data-role="header">
+		<a href="#header" data-transition="slide" data-direction="reverse" data-icon="arrow-l">back</a>
+		<h2>Contract</h2>
+	</div>
+	<div data-role="main" class="ui-content">
+	<h3>The position list for 2015</h3>
+	<form class="ui-filterable">
+    	<input id="positionFilter" data-type="search" placeholder="Search by names or position" />
+    </form>
+		<div data-role="collapsibleset" data-filter="true" data-input="#positionFilter">
+		      <div data-role="collapsible">
+		        <h3>President</h3>
+		        <p>Mr. Teo Khoon Teng</p>
+		      </div>
+		      <div data-role="collapsible">
+		        <h3>Vice President</h3>
+		        <p>Mr. Low Sik Chuen</p>
+		      </div>
+		      <div data-role="collapsible">
+		        <h3>Secretary</h3>
+		        <p>Ms. Tan Xin Yie</p>
+		      </div>
+		      <div data-role="collapsible">
+		        <h3>Treasurer</h3>
+		        <p>Ms. Ester Ng Pei Xin</p>
+		      </div>
+		      <div data-role="collapsible">
+		        <h3>Deputy Treasurer</h3>
+		        <p>Mr. Yeo Gee Huat</p>
+		      </div>
+			  <div data-role="collapsible">
+		        <h3>Discipline Master</h3>
+		        <p>Ms. Tew Yu Xin</p>
+		      </div>
+		</div>
+	</div>
+  	<div data-role="footer" style="position:fixed;bottom: 0px;width:100%;">
+  		<div data-role="navbar">
+	        <ul>                     
+				<li><a href="#event" data-href="event" data-transition="slide" data-direction="reverse"><img src="image\event.png" /><br />Event</a></li>            
+				<li><a href="#contr" data-href="contr" class="ui-btn-active ui-state-persist" data-transition="slide"><img src="image\contr.png" /><br />Contract</a></li>
+				<li><a href="#about" data-href="about" data-transition="slide"><img src="image\about.png" /><br />About</a></li>
+	        </ul>
+    	</div>
+  	</div>
+</div>
+
+<!--about-->
+<div data-role="page" id="about">
+	<div data-role="header">
+		<a href="#header" data-transition="slide" data-direction="reverse" data-icon="arrow-l">back</a>
+		<h2>About</h2>
+	</div>
+	<div data-role="main" class="ui-content">
+		<p>Taekwon-Do is a Korean martial art, an effective art of self defence as well as a competitive sport. Taekwon-Do society was established in 2013 on TAR universities college.</p>
+		<p>Taekwondo society's aim is to provide an environment to self defence with physical, mental and spiritual training. Our society also help to bodybuilding, stamina, flexibility.</p>
+		<p>
+			5 tents of taekwondo :
+			<img src="image/TKD tenets.jpg" alt="COURTEST,INTEGRITY,PERSEVERANCE,SELF-CONTROL,INDOMITABLE SPIRIT" title="COURTEST,INTEGRITY,PERSEVERANCE,SELF-CONTROL,INDOMITABLE SPIRIT" />
+			<!--
+			<ol>
+	  			<li>COURTEST</li>
+	  			<li>INTEGRITY</li>
+	  			<li>PERSEVERANCE</li>
+	  			<li>SELF-CONTROL</li>
+	  			<li>INDOMITABLE SPIRIT</li>
+			</ol>
+			-->
+		</p>
+		<p>Our society logo : </p>
+		<img src="image/logo.png" alt="about" height=123 width=150 />
+		<p><strong>&copy; Copyright 2016 tackwondo-johor.tk</strong></p>
+		<br />
+  	</div>
+  	<div data-role="footer" style="position:fixed;bottom: 0px;width:100%;">
+  		<div data-role="navbar">
+	        <ul>                     
+				<li><a href="#event" data-href="event" data-transition="slide" data-direction="reverse"><img src="image\event.png" /><br />Event</a></li>            
+				<li><a href="#contr" data-href="contr" data-transition="slide" data-direction="reverse"><img src="image\contr.png" /><br />Contract</a></li>
+				<li><a href="#about" data-href="about" class="ui-btn-active ui-state-persist" data-transition="slide"><img src="image\about.png" /><br />About</a></li>
+	        </ul>
+    	</div>
+  	</div>
+</div>
+
+<!--event/Bang Bang Bang-->
+<div data-role="page" id="e_Bang">
+	<div data-role="header">
+		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" data-icon="arrow-l">back</a>
+		<h2>Event 2015</h2>
+	</div>
+	<div data-role="main" class="ui-content">
+	<h4 style="color:gray">
+		Event : Bukit Siput Performance<br />
+		Date  : 7th November 2015
+	</h4>
+		<img src="image\Event\bangbangbang\p1.jpg" />
+		<img src="image\Event\bangbangbang\p2.jpg" />
+		<img src="image\Event\bangbangbang\p3.jpg" />
+		<img src="image\Event\bangbangbang\p4.jpg" />
+		<img src="image\Event\bangbangbang\p5.jpg" />
+		<img src="image\Event\bangbangbang\p6.jpg" />
+		<img src="image\Event\bangbangbang\p7.jpg" />
+		<img src="image\Event\bangbangbang\p8.jpg" />
+		<img src="image\Event\bangbangbang\p9.jpg" />
+	</div>
+  	<div data-role="footer" onclick="parent.location='#event'">
+  		<h2>&#60;&#60; back</h2>
+  	</div>
+</div>
+
+<!--event/Tarcian come on-->
+<div data-role="page" id="e_Tarcian">
+	<div data-role="header">
+		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" data-icon="arrow-l">back</a>
+		<h2>Event 2015</h2>
+	</div>
+	<div data-role="main" class="ui-content">
+	<h4 style="color:gray">
+		Event : TARCIAN COME ON<br />
+		Date  : 21st November 2015
+	</h4>
+		<img src="image\Event\tarcian\p1.jpg" />
+		<img src="image\Event\tarcian\p2.jpg" />
+		<img src="image\Event\tarcian\p3.jpg" />
+		<img src="image\Event\tarcian\p4.jpg" />
+		<img src="image\Event\tarcian\p5.jpg" />
+		<img src="image\Event\tarcian\p6.jpg" />
+		<img src="image\Event\tarcian\p7.jpg" />
+		<img src="image\Event\tarcian\p8.jpg" />
+		<img src="image\Event\tarcian\p9.jpg" />
+		<img src="image\Event\tarcian\p10.jpg" />
+		<img src="image\Event\tarcian\p11.jpg" />
+		<img src="image\Event\tarcian\p12.jpg" />
+	</div>
+  	<div data-role="footer" onclick="parent.location='#event'">
+  		<h2>&#60;&#60; back</h2>
+  	</div>
+</div>
+
+<!--extra menu (more)-->
+<div data-role="page" data-dialog="true" id="more" class="ui-content" style="width:80%">
+  <div data-role="header">
+    <h1>Menu</h1>
+  </div>
+
+  <div data-role="main">
+    <p>
+    	<ul data-role="listview" data-inset="true">
+    		<li><a href="#header" data-href="overview" data-transition="slide">Overview</a></li>
+    		<li><a href="https://www.facebook.com/sharer/sharer.php?u=taekwondo-johor.tk" target="_blank">Like us on facebook</a></li>
+	    </ul>
+	</p>
+  </div>
+
+  <div data-role="footer">
+    <h1></h1>
+  </div>
+</div> 
+
+</body>
+
+</html>
